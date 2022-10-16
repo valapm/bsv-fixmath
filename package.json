@@ -4,11 +4,15 @@
   "description": "Fixed-point math for Bitcoin Script",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
+  "files": [
+    "scrypt",
+    "lib"
+  ],
   "scripts": {
     "build": "npm run build:node && npm run build:scrypt",
     "build:node": "tsc",
     "build:scrypt": "export NODE_OPTIONS=--openssl-legacy-provider && node compile.js",
-    "prepare": "npm run build",
+    "prepare": "npm run build:node",
     "test": "npm run test:node && npm run test:scrypt",
     "test:node": "jest",
     "test:scrypt": "export NODE_OPTIONS=--openssl-legacy-provider && jest --testMatch \"**/?(*.)+(scrypttest).[jt]s?(x)\""
