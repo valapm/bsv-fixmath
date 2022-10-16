@@ -1,0 +1,18 @@
+import "../scrypt/fixMath.scrypt";
+
+contract TestFixMath {
+  static const int scale = 18446744073709551616;
+
+  public function testLog() {
+    require(FixMath.log(scale) == 0);
+
+    // log(21.8)
+    int res = FixMath.log(402139020806868238336);
+    require(res == 56851204471023106498);
+  }
+
+  public function testExp() {
+    int exptest1 = FixMath.exp(10 * scale);
+    require(exptest1 / scale == 22026);
+  }
+}

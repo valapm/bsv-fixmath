@@ -1,0 +1,38 @@
+{
+  "name": "bsv-fixmath",
+  "version": "1.0.0",
+  "description": "Fixed-point math for Bitcoin Script",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "npm run build:node && npm run build:scrypt",
+    "build:node": "tsc",
+    "build:scrypt": "export NODE_OPTIONS=--openssl-legacy-provider && node compile.js",
+    "prepare": "npm run build",
+    "test": "npm run test:node && npm run test:scrypt",
+    "test:node": "jest",
+    "test:scrypt": "export NODE_OPTIONS=--openssl-legacy-provider && jest --testMatch \"**/?(*.)+(scrypttest).[jt]s?(x)\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valapm/bsv-fixmath.git"
+  },
+  "keywords": [
+    "BSV",
+    "sCrypt"
+  ],
+  "author": "Merlin Buczek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/valapm/bsv-fixmath/issues"
+  },
+  "homepage": "https://github.com/valapm/bsv-fixmath#readme",
+  "devDependencies": {
+    "@tsconfig/node18": "^1.0.1",
+    "@types/jest": "^29.1.2",
+    "jest": "^29.2.0",
+    "scryptlib": "^1.0.8",
+    "ts-jest": "^29.0.3",
+    "typescript": "^4.8.4"
+  }
+}
