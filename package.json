@@ -1,6 +1,6 @@
 {
   "name": "bsv-fixmath",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fixed-point math for Bitcoin Script",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
