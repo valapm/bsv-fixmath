@@ -7,16 +7,10 @@ Install with `npm install bsv-fixmath`.
 
 ## Getting started
 
-Compiling to Bitcoin Script (`dist` directory):
-
-```sh
-./getCompiler.sh && npm run build:scrypt
-```
-
 Convert your numbers to 64-bit fixed-point integers:
 
 ```typescript
-const fixedNum = BigInt(num * 2 ** 64)
+const fixedNum = BigInt(num * 2 ** 64);
 ```
 
 ```sCrypt
@@ -26,10 +20,20 @@ int fixedNum = num << 64;
 Here are all functions exposed by the library:
 
 ```typescript
-import { exp2, exp, mostSignificantBit, log2, log, log10, sqrt, root, pow } from "bsv-fixMath"
+import {
+  exp2,
+  exp,
+  mostSignificantBit,
+  log2,
+  log,
+  log10,
+  sqrt,
+  root,
+  pow,
+} from "bsv-fixmath";
 
-const fixedResult = exp(fixedNum)
-const result = Number(fixedResult) / 2 ** 64
+const fixedResult = exp(fixedNum);
+const result = Number(fixedResult) / 2 ** 64;
 ```
 
 ```sCrypt

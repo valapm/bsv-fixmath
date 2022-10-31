@@ -9,9 +9,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "npm run build:node && npm run build:scrypt",
-    "build:node": "tsc",
-    "build:scrypt": "export NODE_OPTIONS=--openssl-legacy-provider && node compile.js",
+    "build": "tsc",
     "prepare": "npm run build:node",
     "test": "npm run test:node && npm run test:scrypt",
     "test:node": "jest",
