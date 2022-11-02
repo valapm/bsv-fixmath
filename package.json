@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build:node",
+    "prepare": "npm run build",
     "test": "npm run test:node && npm run test:scrypt",
     "test:node": "jest",
     "test:scrypt": "export NODE_OPTIONS=--openssl-legacy-provider && jest --testMatch \"**/?(*.)+(scrypttest).[jt]s?(x)\""
